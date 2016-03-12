@@ -1,0 +1,13 @@
+{
+  "name": "handlerr",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "tap test/test-*.js"
+  },
+  "dependencies": {
+    "lodash": "^4.6.1"
+  },
+  "devDependencies": {
+    "tap": "^5.7.0"
+  }
+}
