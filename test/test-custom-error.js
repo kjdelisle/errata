@@ -4,11 +4,28 @@ var fmt = require('util').format;
 var handlerr = require('../index');
 var tap = require('tap');
 
-tap.test('Creation testing', function (t) {
+tap.test('Custom Error testing', function (t) {
   t.test('error function - default handler', function(t) {
     var message = 'Why did you DO that!?';
     var code = 'SILLY';
     var SillyError = handlerr.create('SillyError', code);
+
+    try {
+      throw new SillyError(message);
+      t.fail('No error was thrown!');
+    } catch (err) {
+      t.equal(err.message, message, 'provided message returned');
+      t.equal(err.code, code, 'provided code returned');
+      t.ok(err.stack, 'error has a stack trace');
+      t.type(err, SillyError, 'error is correct type');
+    }
+    t.end();
+  });
+
+  t.test('error function - quick create', function(t) {
+    var message = 'Why did you DO that!?';
+    var code = 'SILLY';
+    var SillyError = handlerr('SillyError', code);
 
     try {
       throw new SillyError(message);
