@@ -1,0 +1,16 @@
+{
+  "errors": [
+    {
+      "name":"GoofyError",
+      "code":"GOOFD"
+    },
+    {
+      "name":"ReallyBigMistake",
+      "code":"OCRAP"
+    },
+    {
+      "name":"NotABigDeal",
+      "code":"MEH"
+    }
+  ]
+}
