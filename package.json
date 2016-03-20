@@ -1,6 +1,6 @@
 {
   "name": "errata",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "test": "tap test/test-*.js"
   },
@@ -10,5 +10,17 @@
   },
   "devDependencies": {
     "tap": "^5.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kjdelisle/errata.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kjdelisle/errata/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Kevin Delisle",
+    "url": "https://github.com/kjdelisle"
   }
 }
