@@ -1,5 +1,5 @@
 {
-  "name": "handlerr",
+  "name": "errata",
   "version": "0.0.1",
   "scripts": {
     "test": "tap test/test-*.js"
