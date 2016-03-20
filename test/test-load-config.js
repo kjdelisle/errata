@@ -1,13 +1,13 @@
 'use strict';
 
 var _ = require('lodash');
-var handlerr = require('../index');
+var errata = require('../index');
 var path = require('path');
 var tap = require('tap');
 
 tap.test('Error Configuration', function (t) {
   t.test('Load error types from config', function(t) {
-    var config = handlerr.loadConfig(path.resolve('test', 'fixtures',
+    var config = errata.loadConfig(path.resolve('test', 'fixtures',
       'fake-config.json'));
     t.ok(config, 'Config has value');
     _.each(config, function(err) {

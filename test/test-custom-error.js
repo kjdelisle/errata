@@ -1,14 +1,14 @@
 'use strict';
 
 var fmt = require('util').format;
-var handlerr = require('../index');
+var errata = require('../index');
 var tap = require('tap');
 
 tap.test('Custom Error testing', function (t) {
   t.test('error function - default handler', function(t) {
     var message = 'Why did you DO that!?';
     var code = 'SILLY';
-    var SillyError = handlerr.create('SillyError', code);
+    var SillyError = errata.create('SillyError', code);
 
     try {
       throw new SillyError(message);
@@ -25,7 +25,7 @@ tap.test('Custom Error testing', function (t) {
   t.test('error function - quick create', function(t) {
     var message = 'Why did you DO that!?';
     var code = 'SILLY';
-    var SillyError = handlerr('SillyError', code);
+    var SillyError = errata('SillyError', code);
 
     try {
       throw new SillyError(message);
@@ -42,7 +42,7 @@ tap.test('Custom Error testing', function (t) {
   t.test('error function - custom handler', function(t) {
     var srs = 'SUPER SERIOUS ALERT: ';
     var code = 'SRS';
-    var SeriousError = handlerr.create('SeriousError', code, function(msg) {
+    var SeriousError = errata.create('SeriousError', code, function(msg) {
       this.message = fmt('%s: %s', srs, msg);
     });
     var noIceCream = 'We ran out of ice cream!'
