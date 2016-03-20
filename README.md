@@ -1,4 +1,4 @@
-# Handlerr
+# Errata
 
 Easily create custom error types for better flow control and logging.
 
@@ -45,3 +45,21 @@ try {
     console.log(err.stack);
 }
 ```
+
+## API
+
+#### errata.create(name, [[code], [handler, ...]])
+
+Create a new Error prototype with the given *name* as its object type.
+An optional *code* may be specified so that all instances of the created Error
+have the default error code.
+An optional *handler* function may be provided that takes any remaining
+parameters in. You may use this function as you see fit to modify the behaviours
+and properties of the Error object.
+
+You may also call `errata(name, [[code], [handler, ...]])` for the same effect.
+
+#### errata.loadConfig(filepath)
+
+Open a JSON file that defines a list of errors that will be loaded into an
+array. *filepath* must be a string.
