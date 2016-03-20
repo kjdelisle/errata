@@ -1,4 +1,5 @@
 # Errata
+[![Build Status](https://travis-ci.org/kjdelisle/errata.svg?branch=master)](https://travis-ci.org/kjdelisle/errata)
 
 Easily create custom error types for better flow control and logging.
 
