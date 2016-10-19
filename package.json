@@ -2,6 +2,7 @@
   "name": "errata",
   "version": "0.0.3",
   "scripts": {
+    "pretest": "eslint --ignore-path .gitignore ./",
     "test": "tap test/test-*.js"
   },
   "main": "index.js",
@@ -9,6 +10,8 @@
     "lodash": "^4.6.1"
   },
   "devDependencies": {
+    "eslint": "^3.8.1",
+    "eslint-config-strongloop": "^2.1.0",
     "tap": "^5.7.0"
   },
   "repository": {
