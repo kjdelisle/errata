@@ -3,11 +3,14 @@
   "version": "0.0.6",
   "scripts": {
     "pretest": "eslint --ignore-path .gitignore ./",
-    "test": "tap test/test-*.js"
+    "test": "tap test/test-*.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "main": "index.js",
   "dependencies": {
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "snyk": "^1.319.0"
   },
   "devDependencies": {
     "eslint": "^6.2.2",
@@ -25,5 +28,6 @@
   "author": {
     "name": "Kevin Delisle",
     "url": "https://github.com/kjdelisle"
-  }
+  },
+  "snyk": true
 }
